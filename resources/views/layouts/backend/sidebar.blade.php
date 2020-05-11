@@ -67,8 +67,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Svi albumi</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Dodaj novi album</a></li>
+            <li><a href="{{ route('albumi.index') }}"><i class="fa fa-circle-o"></i> Svi albumi</a></li>
+            <li><a href="{{ route('albumi.create') }}"><i class="fa fa-circle-o"></i> Dodaj novi album</a></li>
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-file-image-o"></i> <span>Slike</span></a></li>

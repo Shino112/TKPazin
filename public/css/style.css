@@ -1,0 +1,55 @@
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+.map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+.navigacija-link{
+    color: #dcfd50 !important;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.navigacija-link:hover{
+    color: white !important;
+    font-weight: 700;
+    font-size: larger;
+    text-decoration: underline !important;
+}
+
+.navigacija-podlink{
+    color: #dcfd50 !important;
+    font-weight: 500;
+    font-size: large;
+}
+
+.navigacija-podlink:hover{
+    color: black !important;
+    font-weight: 500;
+    font-size: large;
+    text-decoration: underline !important;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+@media screen and (max-width: 699px) {
+    #carouselExampleIndicators1 {
+      display: none;
+    }
+  }
+  
+@media screen and (min-width: 700px) {
+    #carouselExampleIndicators2 {
+      display: none;
+    }
+  }

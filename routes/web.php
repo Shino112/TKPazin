@@ -76,3 +76,14 @@ Route::resource('/backend/sezone', 'Backend\SezoneController');
 
 //rute za albume u CMS-u
 Route::resource('/backend/albumi', 'Backend\AlbumiController');
+
+//rute za slike u CMS-u
+Route::resource('/backend/slike', 'Backend\SlikeController')->except(['create', 'store']);
+Route::get('/backend/{album}/slike', [
+    'uses' => 'Backend\SlikeController@create',
+    'as' => 'slike.create',
+]);
+Route::post('/backend/{album}/slike', [
+    'uses' => 'Backend\SlikeController@store',
+    'as' => 'slike.store',
+]);

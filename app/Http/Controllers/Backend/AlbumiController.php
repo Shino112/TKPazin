@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Album;
+use App\Slika;
 
 class AlbumiController extends BackendController
 {
@@ -85,7 +86,12 @@ class AlbumiController extends BackendController
      */
     public function show($id)
     {
-        //
+        $slike = Slika::latest()->where('album_id', $id)->get();
+        $slikeCount = Slika::where('album_id', $id)->count();
+        $album = Album::where('id', $id)->first();
+
+        //dd($album);
+        return view("backend.slike.index", compact('slike', 'slikeCount', 'album'));
     }
 
     /**
@@ -156,6 +162,9 @@ class AlbumiController extends BackendController
     public function destroy($id)
     {
         $album = Album::findOrFail($id);
+
+        unlink(public_path($album->slika_albuma));
+
         $album->delete();
 
         return redirect(route("albumi.index"))->with("message", "Album je uspješno izbrisan!");

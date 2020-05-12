@@ -19,7 +19,7 @@
                                           </button>
                                         {!! Form::close() !!}  
                                     </td>
-                                    <td>{{ $album->naslov }}</td>
+                                    <td><a href="{{ route('albumi.show', $album->id) }}">{{ $album->naslov }}</a></td>
                                     <td><abbr title="{{ $album->dateFormatted(true) }}">{{ $album->dateFormatted() }}</abbr></td>
                                 </tr>
                             @endforeach

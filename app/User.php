@@ -42,4 +42,11 @@ class User extends Authenticatable
         $hash = md5(strtolower(trim($this->attributes['email'])));
         return "http://www.gravatar.com/avatar/$hash";
     }
+
+    public function dateFormatted($showTimes = false)
+    {
+        $format = "d/m/Y";
+        if ($showTimes) $format = $format . " H:i:s";
+        return $this->updated_at->format($format);
+    }
 }

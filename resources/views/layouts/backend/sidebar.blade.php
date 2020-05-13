@@ -71,7 +71,7 @@
             <li><a href="{{ route('albumi.create') }}"><i class="fa fa-circle-o"></i> Dodaj novi album</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="fa fa-user"></i> <span>Korisnik</span></a></li>
+        <li><a href="{{ route('users.index') }}"><i class="fa fa-user"></i> <span>Korisnici</span></a></li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-stack-overflow"></i>

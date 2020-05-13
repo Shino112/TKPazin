@@ -87,3 +87,6 @@ Route::post('/backend/{album}/slike', [
     'uses' => 'Backend\SlikeController@store',
     'as' => 'slike.store',
 ]);
+
+//rute za korisnika u CMS-u
+Route::resource('/backend/users', 'Backend\UsersController');

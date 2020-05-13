@@ -10,11 +10,11 @@ class Sezona extends Model
     
     public function turnir_pojedinacni()
     {
-        return $this->hasMany(TurnirPojedinacni::class);
+        return $this->hasMany(TurnirPojedinacni::class, 'sezona_id');
     }
     public function piramida()
     {
-        return $this->hasMany(TurnirPiramida::class);
+        return $this->hasMany(TurnirPiramida::class, 'sezona_id');
     }
     public function getRouteKeyName()
     {

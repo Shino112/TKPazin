@@ -39,7 +39,7 @@
                     <div class="col-12 col-md-6">
                         <div class="form-group {{ $errors->has('clanstvo') ? 'has-error' : '' }}">
                             {!! Form::label('Član od:') !!}
-                            {!! Form::number('clanstvo', null, ['class' => 'form-control']) !!}
+                            {!! Form::number('clanstvo', 2000, ['class' => 'form-control']) !!}
                             @if($errors->has('clanstvo'))
                                 <span class="help-block">{{ $errors->first('clanstvo') }}</span>
                             @endif

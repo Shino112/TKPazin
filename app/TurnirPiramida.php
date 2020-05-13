@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class TurnirPiramida extends Model
 {
+    protected $fillable = ['naziv', 'sezona_id'];
+    
     public function sezona_piramida()
     {
-        return $this->belongsTo(Sezona::class);
+        return $this->belongsTo(Sezona::class, 'sezona_id');
     }
 
     public function nastup_igraca_piramida()

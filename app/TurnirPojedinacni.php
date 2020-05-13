@@ -8,7 +8,7 @@ class TurnirPojedinacni extends Model
 {
     public function sezona_pojedinacni_turnir()
     {
-        return $this->belongsTo(Sezona::class);
+        return $this->belongsTo(Sezona::class, 'sezona_id');
     }
 
     public function nastup_igraca_turnir()

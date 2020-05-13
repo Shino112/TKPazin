@@ -90,3 +90,6 @@ Route::post('/backend/{album}/slike', [
 
 //rute za korisnika u CMS-u
 Route::resource('/backend/users', 'Backend\UsersController');
+
+//rute za piramidu u CMS-u
+Route::resource('/backend/piramida', 'Backend\PiramidaController');

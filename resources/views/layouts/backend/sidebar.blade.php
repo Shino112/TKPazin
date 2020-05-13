@@ -94,8 +94,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sve piramide</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Dodaj nove piramide</a></li>
+            <li><a href="{{ route('piramida.index') }}"><i class="fa fa-circle-o"></i> Sve piramide</a></li>
+            <li><a href="{{ route('piramida.create') }}"><i class="fa fa-circle-o"></i> Dodaj nove piramide</a></li>
           </ul>
         </li>
       </ul>

@@ -36,7 +36,7 @@
                     {{ $novosti->links() }}
                   </div>
                   <div class="pull-right">
-                      <small>{{ $novostiCount }} novosti</small>
+                      <small>{{ $novostiCount }} stvari</small>
                   </div>
                   
               </div>

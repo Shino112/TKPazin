@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Igrac extends Model
 {
+    public function bodovi_igrac_turnir()
+    {
+        return $this->hasMany(NastupTurnir::class, 'igrac_id');
+    }
+
+    public function bodovi_igrac_piramida()
+    {
+        return $this->hasMany(NastupPiramida::class, 'igrac_id');
+    }
+    
     public function igrac_piramida()
     {
         return $this->belongsToMany(TurnirPiramida::class, 'nastup_piramidas')->withPivot('bodovi');

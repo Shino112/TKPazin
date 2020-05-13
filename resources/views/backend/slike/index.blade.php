@@ -37,7 +37,7 @@
                     
                   </div>
                   <div class="pull-right">
-                      <small>{{ $slikeCount }} slika</small>
+                      <small>{{ $slikeCount }} stvari</small>
                   </div>
                   
               </div>

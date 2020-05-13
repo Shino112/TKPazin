@@ -36,7 +36,7 @@
                     {{ $igraci->links() }}
                   </div>
                   <div class="pull-right">
-                      <small>{{ $igraciCount }} igrača</small>
+                      <small>{{ $igraciCount }} stvari</small>
                   </div>
                   
               </div>

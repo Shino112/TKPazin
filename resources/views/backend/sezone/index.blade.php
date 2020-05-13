@@ -36,7 +36,7 @@
                     {{ $sezone->links() }}
                   </div>
                   <div class="pull-right">
-                      <small>{{ $sezoneCount }} sezone</small>
+                      <small>{{ $sezoneCount }} stvari</small>
                   </div>
                   
               </div>

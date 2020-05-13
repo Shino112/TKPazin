@@ -19,7 +19,7 @@
                                           </button>
                                         {!! Form::close() !!}  
                                     </td>
-                                    <td>{{ $piramida->naziv }}</td>
+                                    <td><a href="{{ route('piramida.show', $piramida->id) }}">{{ $piramida->naziv }}</a></td>
                                     <td>{{ $piramida->sezona_piramida->godina }}</td>
                                 </tr>
                             @endforeach

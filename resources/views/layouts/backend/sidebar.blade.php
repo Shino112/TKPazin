@@ -81,8 +81,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Svi turniri</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Dodaj novi turnir</a></li>
+            <li><a href="{{ route('turniri.index') }}"><i class="fa fa-circle-o"></i> Svi turniri</a></li>
+            <li><a href="{{ route('turniri.create') }}"><i class="fa fa-circle-o"></i> Dodaj novi turnir</a></li>
           </ul>
         </li>
         <li class="treeview">

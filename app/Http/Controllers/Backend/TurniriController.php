@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\TurnirPiramida;
-use App\NastupPiramida;
+use App\TurnirPojedinacni;
+use App\NastupTurnir;
 use App\Igrac;
 
-class PiramidaController extends BackendController
+class TurniriController extends BackendController
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +17,10 @@ class PiramidaController extends BackendController
      */
     public function index()
     {
-        $piramide = TurnirPiramida::latest()->paginate(10);
-        $piramideCount = TurnirPiramida::count();
+        $turniri = TurnirPojedinacni::latest()->paginate(10);
+        $turniriCount = TurnirPojedinacni::count();
 
-        return view("backend.piramida.index", compact('piramide', 'piramideCount'));
+        return view("backend.turniri.index", compact('turniri', 'turniriCount'));
     }
 
     /**
@@ -30,9 +30,9 @@ class PiramidaController extends BackendController
      */
     public function create()
     {
-        $piramida = new TurnirPiramida ();
+        $turnir = new TurnirPojedinacni ();
 
-        return view("backend.piramida.create", compact('piramida'));
+        return view("backend.turniri.create", compact('turnir'));
     }
 
     /**
@@ -48,9 +48,9 @@ class PiramidaController extends BackendController
             'sezona_id' => 'required',
         ]);
 
-        TurnirPiramida::create($request->all());
+        TurnirPojedinacni::create($request->all());
 
-        return redirect(route('piramida.index'))->with('message', 'Piramida uspješno izrađena!');
+        return redirect(route('turniri.index'))->with('message', 'Pojedinačni turnir uspješno izrađen!');
     }
 
     /**
@@ -61,40 +61,40 @@ class PiramidaController extends BackendController
      */
     public function show($id)
     {
-        $piramida = TurnirPiramida::findOrFail($id);
+        $turnir = TurnirPojedinacni::findOrFail($id);
 
-        $igraci_u_piramidi = NastupPiramida::where('turnir_piramida_id', $id)->get();
+        $igraci_u_turniru = NastupTurnir::where('turnir_pojedinacni_id', $id)->get();
 
-        $igraci_u_piramidiCount = NastupPiramida::where('turnir_piramida_id', $id)->count();
+        $igraci_u_turniruCount = NastupTurnir::where('turnir_pojedinacni_id', $id)->count();
 
         $id_turnira = $id;
         
         //dd($igraci_u_turniru);
         
-        return view("backend.bodovi_piramida.index", compact('piramida', 'igraci_u_piramidi', 'igraci_u_piramidiCount', 'id_turnira'));
+        return view("backend.bodovi_turnir.index", compact('turnir', 'igraci_u_turniru', 'igraci_u_turniruCount', 'id_turnira'));
 
     }
 
     public function bodovi($id)
     {
-        $piramida = TurnirPiramida::findOrFail($id);
+        $turnir = TurnirPojedinacni::findOrFail($id);
         
-        $bodovi = new NastupPiramida ();
+        $bodovi = new NastupTurnir ();
         
         $igraci = Igrac::orderBy('prezime', 'asc')->get();
 
-        $bodovi_na_piramidi = NastupPiramida::where('turnir_piramida_id', $id)->get();
+        $bodovi_na_turniru = NastupTurnir::where('turnir_pojedinacni_id', $id)->get();
 
         $id_turnira = $id;
 
         //dd($id_turnira);
 
-        return view("backend.bodovi_piramida.create", compact('igraci', 'bodovi_na_piramidi', 'bodovi', 'id_turnira', 'piramida'));
+        return view("backend.bodovi_turnir.create", compact('igraci', 'bodovi_na_turniru', 'bodovi', 'id_turnira', 'turnir'));
     }
 
     public function bodovi_store(Request $request, $id)
     {
-        $piramida_bodovi = NastupPiramida::where('turnir_piramida_id', $id)->delete();
+        $turnir_bodovi = NastupTurnir::where('turnir_pojedinacni_id', $id)->delete();
         
         foreach($request->igrac_id as $igrac)
         {
@@ -109,13 +109,13 @@ class PiramidaController extends BackendController
         {
             //dd($data_igrac);
             //dd($data_bodovi);
-            $bodovi_na_piramidi = new NastupPiramida ();
-            $bodovi_na_piramidi->igrac_id = $data_igrac[$i];
-            $bodovi_na_piramidi->turnir_piramida_id = $id;
-            $bodovi_na_piramidi->bodovi = $data_bodovi[$i];
-            $bodovi_na_piramidi->save();
+            $bodovi_na_turniru = new NastupTurnir ();
+            $bodovi_na_turniru->igrac_id = $data_igrac[$i];
+            $bodovi_na_turniru->turnir_pojedinacni_id = $id;
+            $bodovi_na_turniru->bodovi = $data_bodovi[$i];
+            $bodovi_na_turniru->save();
         }
-        return redirect(route('piramida.show', $id))->with("message", "Bodovi su uspješno dodani!");
+        return redirect(route('turniri.show', $id))->with("message", "Bodovi su uspješno dodani!");
     }
 
     /**
@@ -126,9 +126,9 @@ class PiramidaController extends BackendController
      */
     public function edit($id)
     {
-        $piramida = TurnirPiramida::findOrFail($id);
+        $turnir = TurnirPojedinacni::findOrFail($id);
         
-        return view("backend.piramida.edit", compact('piramida'));
+        return view("backend.turniri.edit", compact('turnir'));
     }
 
     /**
@@ -145,11 +145,11 @@ class PiramidaController extends BackendController
             'sezona_id' => 'required',
         ]);
 
-        $piramida = TurnirPiramida::findOrFail($id);
+        $turnir = TurnirPojedinacni::findOrFail($id);
         
-        $piramida->update($request->all());
+        $turnir->update($request->all());
 
-        return redirect(route('piramida.index'))->with('message', 'Piramida uspješno izmjenjena!');
+        return redirect(route('turniri.index'))->with('message', 'Pojedinačni turnir uspješno je izmjenjen!');
     }
 
     /**
@@ -160,9 +160,9 @@ class PiramidaController extends BackendController
      */
     public function destroy($id)
     {
-        $piramida = TurnirPiramida::findOrFail($id);
-        $piramida->delete();
+        $turnir = TurnirPojedinacni::findOrFail($id);
+        $turnir->delete();
 
-        return redirect(route("piramida.index"))->with("message", "Piramida je uspješno izbrisana!");
+        return redirect(route("turniri.index"))->with("message", "Pojedinačni turnir je uspješno izbrisan!");
     }
 }

@@ -44,6 +44,7 @@
             </thead>
             <tbody>
                 @foreach($igraci as $igrac)
+                @if($igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') != 0)
                 <tr>
                     <td scope="row" class="sno">&nbsp;</td>
                     <td>
@@ -91,6 +92,7 @@
                         @endforeach
                         <td>{{ $igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') }}</td>
                 </tr>
+                @endif
                 @endforeach
             </tbody>
         </table>

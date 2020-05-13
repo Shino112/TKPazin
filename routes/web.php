@@ -93,3 +93,22 @@ Route::resource('/backend/users', 'Backend\UsersController');
 
 //rute za piramidu u CMS-u
 Route::resource('/backend/piramida', 'Backend\PiramidaController');
+Route::get('/backend/piramida/{piramida}/bodovi', [
+    'uses' => 'Backend\PiramidaController@bodovi',
+    'as' => 'bodovi.piramida',
+]);
+Route::post('/backend/piramida/{piramida}/bodovi', [
+    'uses' => 'Backend\PiramidaController@bodovi_store',
+    'as' => 'bodovi.piramida.store',
+]);
+
+//rute za turnire u CMS-u
+Route::resource('/backend/turniri', 'Backend\TurniriController');
+Route::get('/backend/turniri/{turniri}/bodovi', [
+    'uses' => 'Backend\TurniriController@bodovi',
+    'as' => 'bodovi.turnir',
+]);
+Route::post('/backend/turniri/{turniri}/bodovi', [
+    'uses' => 'Backend\TurniriController@bodovi_store',
+    'as' => 'bodovi.turnir.store',
+]);

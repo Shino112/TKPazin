@@ -36,7 +36,7 @@
                     {{ $piramide->links() }}
                   </div>
                   <div class="pull-right">
-                      <small>{{ $piramideCount }} piramide</small>
+                      <small>{{ $piramideCount }} stvari</small>
                   </div>
                   
               </div>

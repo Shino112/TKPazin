@@ -17,4 +17,9 @@ class TurnirPiramida extends Model
     {
         return $this->belongsToMany(Igrac::class, 'nastup_piramidas');
     }
+
+    public function bodovi_piramida()
+    {
+        return $this->hasMany(NastupPiramida::class, 'turnir_piramida_id');
+    }
 }

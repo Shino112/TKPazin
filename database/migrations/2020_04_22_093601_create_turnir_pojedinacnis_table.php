@@ -18,7 +18,7 @@ class CreateTurnirPojedinacnisTable extends Migration
             $table->string('naziv');
             $table->bigInteger('sezona_id')->unsigned();
             $table->foreign('sezona_id')->references('id')->on('sezonas')->onDelete('cascade');
-            $table->longtext('zdrijeb');
+            $table->longtext('zdrijeb')->nullable();
             $table->timestamps();
         });
     }

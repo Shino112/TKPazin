@@ -19,7 +19,9 @@
                         data-target="#image-gallery">
                     <img class="img-thumbnail"
                         src="{{ $slika->putanja }}"
-                        alt="{{ $slika->naslov }}">
+                        alt="{{ $slika->naslov }}"
+                        style="height: 300px; width: 100%;"
+                        >
                     </a>
                     </div>
                 @endforeach

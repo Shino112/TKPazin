@@ -11,7 +11,7 @@
             <div class="col-md-4 mb-5">
                 <div class="align-center">
                 <i class="fas fa-landmark fa-5x mar-bot20"></i>
-                <h4 class="text-bold">O klubu:</h4>
+                <h4 class="text-bold" style="color:#000000">O klubu:</h4>
                 <p>Teniski klub "Pazin" ima sjedište u Pazinu, Gradskih igrališta bb. Smješten je između nogometnog
                     igrališta Pazinke, dvorane osnovne škole i PIN-a. Ima dva terena s kvalitetnom reflektorskom
                     rasvjetom. Klub broji oko 90 igrača raznih kategorija. Klub je osnovan 1991. godine.
@@ -21,7 +21,7 @@
             <div class="col-md-4 mb-5">
                 <div class="align-center">
                 <i class="far fa-money-bill-alt fa-5x mar-bot20"></i>
-                <h4 class="text-bold">Članarina:</h4>
+                <h4 class="text-bold" style="color:#000000">Članarina:</h4>
                 <p>Godišnja članarina iznosi <strong>200 kn</strong>, a učlaniti se mogu svi građani RH. Za
                     uplatnicu nazvati <a href="tel:+385 98 8732 54" style="color:#3867d6; font-weight:bold;">+385 98
                     8732 54</a>. Za članove učenike i studente godišnja članarina iznosi <strong>50 kn</strong>.
@@ -31,7 +31,7 @@
             <div class="col-md-4 mb-5">
                 <div class="align-center">
                 <i class="fas fa-calendar-alt fa-5x mar-bot20"></i>
-                <h4 class="text-bold">Rezervacija terena:</h4>
+                <h4 class="text-bold" style="color:#000000">Rezervacija terena:</h4>
                 <p>Rezervacija terena se vrši obavezno dan ranije na tel. <a href="tel:+385 98 8732 54"
                     style="color:#3867d6; font-weight:bold;">+385
                     98 8732 54</a>. Sat igranja za članove iznosi <strong>10 kn</strong> po igraču. Igranja za
@@ -52,7 +52,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-black mb-3 mx-auto" style="max-width: 18rem; background-color: #FF9F33;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Alen Bakša</h5>
+                    <h5 class="card-title text-center" style="color:#000000">Alen Bakša</h5>
                     <p class="card-text text-center">Potpredsjednik kluba</p>
                 </div>
                 </div>
@@ -60,7 +60,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-black mb-3 mx-auto" style="max-width: 18rem; background-color: #FF9F33;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Marko Bačić</h5>
+                    <h5 class="card-title text-center" style="color:#000000">Marko Bačić</h5>
                     <p class="card-text text-center">Predsjednik kluba</p>
                 </div>
                 </div>
@@ -68,7 +68,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-black mb-3 mx-auto" style="max-width: 18rem; background-color: #FF9F33;">
                 <div class="card-body">
-                    <h5 class="card-title text-center">Vjeko Krajcar</h5>
+                    <h5 class="card-title text-center" style="color:#000000">Vjeko Krajcar</h5>
                     <p class="card-text text-center">Tajnik kluba</p>
                 </div>
                 </div>

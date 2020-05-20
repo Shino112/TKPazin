@@ -108,7 +108,7 @@ h2,h3,h4,h5,td {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    width: 500px;
+    height: 500px;
     
 }
 .responsive-iframe {

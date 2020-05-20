@@ -25,6 +25,9 @@
                     <a class="nav-link navigacija-link" href="{{ route('novosti') }}">Novosti</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link navigacija-link" href="/rezervacija-terena">Rezervacija terena</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link navigacija-link" href="{{ route('pojedinacni.turnir', \App\Sezona::orderBy('godina', 'desc')->pluck('id')->first()) }}">Pojedinačni turniri</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -46,9 +49,12 @@
                 <li class="nav-item">
                     <a class="nav-link navigacija-link" href="/kontakt">Kontakt</a>
                 </li>
+                <li class="nav-item mt-2" id="slika-meni">
+                    <img src="/img/2.png" alt="Responsive image">
+                </li>
             </ul>
         </div>
-        <span class="navbar-text">
+        <span class="navbar-text" id="slika-desno">
             <img src="/img/2.png" alt="Responsive image">
         </span>
     </nav>

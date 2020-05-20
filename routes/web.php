@@ -28,6 +28,11 @@ Route::get('/o-klubu', function() {
     return view('frontend.o_klubu');
 });
 
+/* Rezervacija terena rute */
+Route::get('/rezervacija-terena', function() {
+    return view('frontend.rezervacije');
+});
+
 /* Kontakt rute */
 Route::get('kontakt', 'ContactController@getContact');
 Route::post('kontakt', 'ContactController@saveContact');

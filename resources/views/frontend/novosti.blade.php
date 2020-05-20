@@ -4,21 +4,7 @@
     <!-- Page Content -->
     <div class="container">
     <!-- Page Heading -->
-    <h1 class="my-4">Rezervacije terena</h1>
-    <div class="row m-2">
-        <div class="col-12 col-md-6">
-            <h3 id="teren">Teren 1</h3>
-            <div class="resp-container">
-                <iframe class="responsive-iframe" src="https://openresa.com/plannings-integrated?id=916&key=1939c9881c1a9fff6c4d64c19a154121fc2ddd1e57aca4410cdc64c7b8ca4c2ac0b528f8886e585d#date=0"></iframe>
-            </div>
-        </div>
-        <div class="col-12 col-md-6">
-            <h3 id="teren">Teren 2</h3>
-            <div class="resp-container">
-                <iframe class="responsive-iframe" src="https://openresa.com/plannings-integrated?id=917&key=35b78e5a8bd71d4bdc673cff101a2f264b4794a3cfa0a90de5f07dc448fe5c3efcc13daced7ba23c#date=0"></iframe>
-            </div>
-        </div>
-    </div>
+    
     <h1 class="my-4">Novosti</h1>
     <div class="row">
         @foreach($posts as $post)

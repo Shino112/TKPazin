@@ -108,6 +108,7 @@ h2,h3,h4,h5,td {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
+    
 }
 .responsive-iframe {
     position: absolute;
@@ -122,10 +123,16 @@ h2,h3,h4,h5,td {
     #carouselExampleIndicators1 {
       display: none;
     }
+    #slika-desno {
+        display: none;
+    }
   }
   
 @media screen and (min-width: 700px) {
     #carouselExampleIndicators2 {
       display: none;
+    }
+    #slika-meni{
+        display: none;
     }
   }

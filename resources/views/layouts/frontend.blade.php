@@ -70,7 +70,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/img/karoseli/small/1.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/small/1.JPG" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
             <img src="/img/karoseli/small/2.jpg" class="d-block w-100" alt="...">
@@ -82,10 +82,10 @@
             <img src="/img/karoseli/small/4.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karoseli/small/5.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/small/5.JPG" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karoseli/small/6.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/small/6.JPG" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -108,7 +108,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/img/karoseli/big/1.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/big/1.JPG" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
             <img src="/img/karoseli/big/2.jpg" class="d-block w-100" alt="...">
@@ -120,10 +120,10 @@
             <img src="/img/karoseli/big/4.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karoseli/big/5.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/big/5.JPG" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karoseli/big/6.jpg" class="d-block w-100" alt="...">
+            <img src="/img/karoseli/big/6.JPG" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">

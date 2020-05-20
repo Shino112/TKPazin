@@ -64,9 +64,15 @@
         <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
+		<li data-target="#carouselExampleIndicators2" data-slide-to="5"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <img src="/img/karosel/small/1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
             <img src="/img/karosel/small/2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
@@ -74,6 +80,12 @@
         </div>
         <div class="carousel-item">
             <img src="/img/karosel/small/4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/img/karosel/small/5.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/img/karosel/small/6.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
@@ -90,9 +102,15 @@
         <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+		<li data-target="#carouselExampleIndicators1" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="4"></li>
+		<li data-target="#carouselExampleIndicators1" data-slide-to="5"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
+            <img src="/img/karosel/big/1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
             <img src="/img/karosel/big/2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
@@ -100,6 +118,12 @@
         </div>
         <div class="carousel-item">
             <img src="/img/karosel/big/4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/img/karosel/big/5.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+            <img src="/img/karosel/big/6.jpg" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">

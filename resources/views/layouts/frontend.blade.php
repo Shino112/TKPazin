@@ -108,22 +108,22 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/img/karosel/big/1.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/fxgLs8D" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karosel/big/2.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/KGyQXtp" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karosel/big/3.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/yNPWjBn" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karosel/big/4.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/SwfHdzF" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karosel/big/5.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/YXDSFB8" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-            <img src="/img/karosel/big/6.jpg" class="d-block w-100" alt="...">
+            <img src="https://ibb.co/ft90T45" class="d-block w-100" alt="...">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">

@@ -4,7 +4,7 @@
     <!-- Page Content -->
     <div class="container">
     <!-- Page Heading -->
-    <h1 class="my-4" style="text-align:center; color: #ba3631;">Rang-lista | Piramida {{ $sezona->godina }}</h1>
+    <h1 class="my-4">Rang-lista | Piramida {{ $sezona->godina }}</h1>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
         @foreach($sezone as $sezona)
@@ -19,7 +19,7 @@
     <div>
         <div class="media mb-5">
             <div class="mr-3"><a href="../datoteke/Pravila-Pojedinačni-turniri.pdf" target="_blank"><i
-                class="far fa-file-pdf fa-3x"></i></a></div>
+                class="far fa-file-pdf fa-3x" style="color: #dc3545"></i></a></div>
             <div class="media-body mt-3">
                 <a href="/datoteke/Pravila-Piramida.pdf" target="_blank">
                 <h5 class="mt-0">Pravila
@@ -47,13 +47,13 @@
                 <tr>
                     <td scope="row" class="sno">&nbsp;</td>
                     <td>
-                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
                         <!-- Modal -->
                         <div class="modal fade" id="view_{{ $igrac->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Natjecatelj: {{ $igrac->ime . " " . $igrac->prezime }}</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color: #000000;">Natjecatelj: {{ $igrac->ime . " " . $igrac->prezime }}</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                     </button>
@@ -63,7 +63,7 @@
                                         <div class="col-6">
                                             <img src="{{ $igrac->slika }}" alt="..." class="img-thumbnail">
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-6" style="color: #000000;">
                                             <b>Prebivalište: </b>
                                             <p> {{ $igrac->prebivaliste }}</p>
                                             <b>Igra: </b>

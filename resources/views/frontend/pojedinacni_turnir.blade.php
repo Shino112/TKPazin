@@ -7,7 +7,7 @@
     <!-- Page Content -->
     <div class="container">
         <!-- Page Heading -->
-        <h1 class="my-4" style="text-align:center; color: #ba3631;">Pojedinačni turniri {{ $sezona->godina }}</h1>
+        <h1 class="my-4">Pojedinačni turniri {{ $sezona->godina }}</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 @foreach($sezone as $sezona)

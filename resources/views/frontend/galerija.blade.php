@@ -4,7 +4,7 @@
     <link href="/css/grid-gallery.css" rel="stylesheet"/>
 @endsection
 @section('content')
-    <h1 class="my-4" style="text-align:center; color: #ba3631;">Galerija</h1>
+    <h1 class="my-4">Galerija</h1>
     <div class="containeri">
         @foreach($albums as $album)
             <div class="gallery-container w-3 h-2">

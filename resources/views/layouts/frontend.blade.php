@@ -11,12 +11,12 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #ba3631;">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #000000;">
         <a class="navbar-brand" href="{{ route('novosti') }}">
-            <img src="/img/logo.jpg" width="50" height="50" class="d-inline-block align-top" alt="">
+            <img src="/img/logo.gif" width="50" height="50" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="background-color: white;">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -32,7 +32,7 @@
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Rang-liste
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #ba3631;">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #000000;">
                         <a class="dropdown-item navigacija-podlink" href="{{ route('ranglista.turnir.kola', \App\Sezona::orderBy('godina', 'desc')->pluck('id')->first()) }}">Pojedinačni turniri</a>
                         <a class="dropdown-item navigacija-podlink" href="{{ route('ranglista.piramida.kola', \App\Sezona::orderBy('godina', 'desc')->pluck('id')->first()) }}">Piramida</a>
                     </div>
@@ -49,7 +49,7 @@
             </ul>
         </div>
         <span class="navbar-text">
-            <b style="font: italic bold 2vw Georgia, serif; color: whitesmoke;">TK Pazin</b>
+            <img src="/img/2.png" alt="Responsive image">
         </span>
     </nav>
 <div style="margin-bottom: 75px;"></div>
@@ -110,9 +110,11 @@
 
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-        <small>Rezervacija terena: <a href="tel:098-434-133" style="color:#ba3631; font-weight: 700; font-size:medium;">098 434 133</a></small>
+        <small>Rezervacija terena: <a href="tel:098-873-254" style="color:#FF9F33; font-weight: 700; font-size:medium;">098 873 254</a></small>
         <br>
         <small>Copyright &copy; 2020 Tenis klub Pazin - Sva prava pridržana</small>
+        <br>
+        <small>Izradili: <a href="https://www.linkedin.com/in/luka-oto%C4%8Dan-643a301a4/" target="_blank">Luka Otočan</a> i <a href="https://www.facebook.com/filip.basa" target="_blank">Filip Baša</a></small>
     </div>
 </footer>
 

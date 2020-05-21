@@ -26,8 +26,13 @@ body{
     background-color: #1D1A17 !important;
 }
 
-h2,h3,h4,h5,td {
+h2,h3,h4,h5 {
     color: #FFFFFF;
+}
+
+td {
+    color: #000000;
+    background-color: #FFFFFF;
 }
 
 .table-hover tbody tr:hover td {

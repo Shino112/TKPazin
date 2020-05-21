@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->paginate(6);
+        $posts = Post::orderBy('created_at', 'desc')->simplePaginate(6);
 
         return view("frontend.novosti", compact('posts'))->render();
     }

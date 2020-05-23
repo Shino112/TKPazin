@@ -34,9 +34,9 @@
                 <h4 class="text-bold" style="color:#000000">Rezervacija terena:</h4>
                 <p>Rezervacija terena se vrši obavezno dan ranije na tel. <a href="tel:+385 98 8732 54"
                     style="color:#3867d6; font-weight:bold;">+385
-                    98 8732 54</a>. Sat igranja za članove iznosi <strong>10 kn</strong> po igraču. Igranja za
+                    98 8732 54</a>. Sat igranja za članove iznosi <strong>10 kn</strong> po satu. Igranja za
                     članove učenike radnim danom do 15 sati je <strong>besplatno</strong> a u ostalim terminima
-                    iznosi isto kao i za ostale članove. Za ostale koji nisu članovi kluba naplaćuje se po <strong>40
+                    iznosi isto kao i za ostale članove. Za ostale koji nisu članovi kluba naplaćuje se po <strong>50
                     kn</strong> sat a minimalno se može rezervirati 2 sata.
                 </p>
                 </div>

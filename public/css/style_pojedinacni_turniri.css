@@ -52,6 +52,7 @@ html {
 	 list-style-type: none;
 	 border-right: 1px dashed #ccc;
 	 flex: 1;
+     background-color: #FFFFFF;
 }
  .team-item {
 	 background-color: #f4f4f4;

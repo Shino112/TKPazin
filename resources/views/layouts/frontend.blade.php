@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YljEc60aJm4Xi8A_Nvpva7_Mq0GsjdfNfklshmuKTkc" />
     <title>@yield('title', 'TK Pazin')</title>
     <link href="/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

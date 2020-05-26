@@ -11,3 +11,9 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
+
+.img-thumbnail {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}

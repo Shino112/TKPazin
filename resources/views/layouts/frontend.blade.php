@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="YljEc60aJm4Xi8A_Nvpva7_Mq0GsjdfNfklshmuKTkc" />
     <meta name="keywords" content="tenis, Tenis, TK, Pazin, TK Pazin, Teniski klub Pazin, tereni, teniski tereni">
+    <meta name="description" 
+        content="TK Pazin klub je koji okuplja sve zaljubljenike u tenis iz središnje Istre od 1991. godine. 
+        Dva zemljana teniska terena s rasvjetom omogućuju igranje i do kasno u noć.
+        Pozivamo svakog tko želi naučiti igrati tenis ili se natjecati s više od 50 igrača da se pridruži našem klubu.
+        Za sve informacije posjetite našu web stranicu.">
     <title>@yield('title', 'TK Pazin')</title>
     <link href="/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

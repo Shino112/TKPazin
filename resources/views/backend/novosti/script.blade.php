@@ -9,13 +9,11 @@
                 title: "Bold",
             },
             {
-                name: "custom",
+                name: "table",
                 action: SimpleMDE.drawTable,
                 className: "fa fa-table",
                 title: "Insert Table",
-            },
-            "|", // Separator
-            ...
+            }
         ],
         });
     </script>

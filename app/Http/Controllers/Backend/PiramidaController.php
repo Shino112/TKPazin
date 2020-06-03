@@ -17,7 +17,7 @@ class PiramidaController extends BackendController
      */
     public function index()
     {
-        $piramide = TurnirPiramida::latest()->paginate(10);
+        $piramide = TurnirPiramida::orderBy('sezona_id', 'desc')->paginate(10);
         $piramideCount = TurnirPiramida::count();
 
         return view("backend.piramida.index", compact('piramide', 'piramideCount'));

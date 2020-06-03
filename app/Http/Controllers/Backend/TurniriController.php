@@ -17,7 +17,7 @@ class TurniriController extends BackendController
      */
     public function index()
     {
-        $turniri = TurnirPojedinacni::latest()->paginate(10);
+        $turniri = TurnirPojedinacni::orderBy('sezona_id', 'desc')->paginate(10);
         $turniriCount = TurnirPojedinacni::count();
 
         return view("backend.turniri.index", compact('turniri', 'turniriCount'));

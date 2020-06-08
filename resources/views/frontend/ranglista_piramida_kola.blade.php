@@ -30,7 +30,7 @@
         </div>
     </div>
     <p style="color: white;">U tražilicu možete unijeti ime ili prezime igrača radi lakšeg pronalaženja.</p>
-    <input class="form-control" id="myInput" type="text" placeholder="Unesite svoje ime ili prezime...">
+    <input class="form-control" id="myInput" type="text" placeholder="Unesite ime ili prezime...">
     <br>
     <div class="table-responsive">
         <table class="table table-hover">

@@ -30,6 +30,7 @@
         </div>
     </div>
     <input class="form-control" id="myInput" type="text" placeholder="Unesite svoje ime ili prezime...">
+    <br>
     <div class="table-responsive">
         <table class="table table-hover">
             <thead class="thead-dark">

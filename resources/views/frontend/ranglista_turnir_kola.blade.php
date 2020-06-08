@@ -29,7 +29,9 @@
             </div>
         </div>
     </div>
-    
+    <p style="color: white;">U tražilicu možete unijeti ime ili prezime igrača radi lakšeg pronalaženja.</p>
+    <input class="form-control" id="myInput" type="text" placeholder="Unesite ime ili prezime...">
+    <br>
     <div class="table-responsive">
         <table class="table table-hover">
             <thead class="thead-dark">
@@ -42,7 +44,7 @@
                 <th scope="col">Ukupno</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 @foreach($igraci as $igrac)
                 @if($igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') != 0)
                 <tr>
@@ -112,5 +114,15 @@
                 $(this).children('td:eq(0)').addClass('sno').text(i+1);
             });
         });
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
     </script>
 @endsection

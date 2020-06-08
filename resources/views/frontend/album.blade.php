@@ -20,7 +20,7 @@
                     <img class="img-thumbnail"
                         src="{{ $slika->putanja }}"
                         alt="{{ $slika->naslov }}"
-                        style="height: 200px; width: 200px;"
+                        style="height: 200px; width: 200px; margin-bottom: 20px;"
                         >
                     </a>
                     </div>

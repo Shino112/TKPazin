@@ -13,14 +13,14 @@
         <div class="row">
             <div class="row">
                 @foreach($slike as $slika)
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 thumb" style="margin: 0 auto !important; display:block;">
+                    <div class="col-lg-3 col-md-4 col-sm-6 thumb">
                     <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="{{ $slika->naslov }}"
                         data-image="{{ $slika->putanja }}"
                         data-target="#image-gallery">
                     <img class="img-thumbnail"
                         src="{{ $slika->putanja }}"
                         alt="{{ $slika->naslov }}"
-                        style="height: 200px; width: 200px; margin-bottom: 20px;"
+                        style="height: 200px; width: 200px; margin-bottom: 20px; margin: 0 auto !important; display: block;"
                         >
                     </a>
                     </div>

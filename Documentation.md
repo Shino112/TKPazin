@@ -3,13 +3,13 @@
 ## Sadržaj
 
 1. [Struktura web stranice](#struktura-web-stranice)
-    1. [Prikaz relacijske baze](https://github.com/Shino112/TKPazin/new/master#prikaz-relacijske-baze)
-2. [Ubacivanje slika](https://github.com/Shino112/TKPazin/new/master#ubacivanje-slika)
-3. [Brisanje bodova igrača na turnirima ako ne igraju u toj sezoni](https://github.com/Shino112/TKPazin/new/master#brisanje-bodova-igra%C4%8Da-na-turnirima-ako-ne-igraju-u-toj-sezoni)
-    1. [Skripta](https://github.com/Shino112/TKPazin/new/master#skripta)
-4. [Brisanje bodova igrača na piramidi ako ne igraju u toj sezoni](https://github.com/Shino112/TKPazin/new/master#brisanje-bodova-igra%C4%8Da-na-piramidi-ako-ne-igraju-u-toj-sezoni)
-    1. [Skripta](https://github.com/Shino112/TKPazin/new/master#skripta-1)
-5. [Pretraživanje igrača](https://github.com/Shino112/TKPazin/new/master#pretra%C5%BEivanje-igra%C4%8Da)
+    1. [Prikaz relacijske baze](#prikaz-relacijske-baze)
+2. [Ubacivanje slika](#ubacivanje-slika)
+3. [Brisanje bodova igrača na turnirima ako ne igraju u toj sezoni](#brisanje-bodova-igra%C4%8Da-na-turnirima-ako-ne-igraju-u-toj-sezoni)
+    1. [Skripta](#skripta)
+4. [Brisanje bodova igrača na piramidi ako ne igraju u toj sezoni](#brisanje-bodova-igra%C4%8Da-na-piramidi-ako-ne-igraju-u-toj-sezoni)
+    1. [Skripta](#skripta-1)
+5. [Pretraživanje igrača](#pretra%C5%BEivanje-igra%C4%8Da)
 
 ## Struktura web stranice
 

@@ -28,7 +28,7 @@ class RangListaPiramidaController extends Controller
         if (isset($kola_id) && count($kola_id) > 0) {
             //Svi id-evi igraca koji su u tom kolu spremi u array
             $odabrani = NastupPiramida::where('turnir_piramida_id', $kola_id)->pluck('igrac_id');
-
+            // query za sve igrače gdje joinamo tablicu s bodovima i s igračima izradimo novo polje ukupno za sumu bodova, grupiramo po igračima i order po sumi od najveće sume
             $igraci = Igrac::whereIn('id', $odabrani)
                 ->leftjoin('nastup_piramidas', 'igracs.id','=','nastup_piramidas.igrac_id')
                 ->whereIn('nastup_piramidas.turnir_piramida_id', $kola_id)

@@ -75,6 +75,7 @@ Route::resource('/backend/novosti', 'Backend\NovostiController');
 
 //rute za igrace u CMS-u
 Route::resource('/backend/igraci', 'Backend\IgraciController');
+Route::get('/search', 'Backend\IgraciController@search');
 
 //rute za sezonu u CMS-u
 Route::resource('/backend/sezone', 'Backend\SezoneController');

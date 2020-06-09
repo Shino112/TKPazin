@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Igrac;
+use Illuminate\Support\Facades\DB;
 
 class IgraciController extends BackendController
 {
@@ -26,6 +27,14 @@ class IgraciController extends BackendController
         $igraci = Igrac::latest()->paginate(10);
         $igraciCount = Igrac::count();
 
+        return view("backend.igraci.index", compact('igraci', 'igraciCount'));
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $igraci = Igrac::where('prezime', 'like', '%'.$search.'%')->orwhere('ime', 'like', '%'.$search.'%')->paginate(10);
+        $igraciCount = Igrac::count();
         return view("backend.igraci.index", compact('igraci', 'igraciCount'));
     }
 

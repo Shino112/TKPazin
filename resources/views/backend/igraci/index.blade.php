@@ -24,6 +24,13 @@
                 <div class="pull-left">
                   <a href="{{ route('igraci.create') }}" class="btn btn-success">Dodaj novog igrača</a>
                 </div>
+                <div class="pull-right">
+                  <p>Igrača se može tražiti po imenu <b>ILI</b> po prezimenu</p>
+                  <form class="form-inline md-form mr-auto mb-4" action="/search" method="get">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+                    <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+                  </form>
+                </div>
               </div>
               <!-- /.box-header -->
               <div class="box-body ">

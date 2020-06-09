@@ -33,7 +33,7 @@ class IgraciController extends BackendController
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $igraci = Igrac::where('prezime', 'like', '%'.$search.'%')->orwhere('ime', 'like', '%'.$search.'%')->orwhere('ime'. ' '. 'prezime', 'like', '%'.$search.'%')->paginate(10);
+        $igraci = Igrac::where('prezime', 'like', '%'.$search.'%')->orwhere('ime', 'like', '%'.$search.'%')->paginate(10);
         $igraciCount = Igrac::count();
         return view("backend.igraci.index", compact('igraci', 'igraciCount'));
     }

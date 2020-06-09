@@ -2,7 +2,7 @@
 
 ## Sadržaj
 
-1. [Struktura web stranice](https://github.com/Shino112/TKPazin/new/master#struktura-web-stranice)
+1. [Struktura web stranice](#struktura-web-stranice)
     1. [Prikaz relacijske baze](https://github.com/Shino112/TKPazin/new/master#prikaz-relacijske-baze)
 2. [Ubacivanje slika](https://github.com/Shino112/TKPazin/new/master#ubacivanje-slika)
 3. [Brisanje bodova igrača na turnirima ako ne igraju u toj sezoni](https://github.com/Shino112/TKPazin/new/master#brisanje-bodova-igra%C4%8Da-na-turnirima-ako-ne-igraju-u-toj-sezoni)

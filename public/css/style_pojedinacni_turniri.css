@@ -13,6 +13,7 @@ html {
 }
 
  .tournament-headers h3 {
+ 	min-width: 20%;
 	flex-shrink: 0;
     text-align:center;
     font-weight: 400;
@@ -23,6 +24,7 @@ html {
     
 }
 .tournament-headers h4 {
+	min-width: 25%;
 	flex-shrink: 0;
     text-align:center;
     font-weight: 400;

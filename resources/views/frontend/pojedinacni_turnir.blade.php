@@ -56,7 +56,7 @@
 
                     
             style1 = window.getComputedStyle(two_h3[0]);
-            style2 = window.getComputedStyle(two_h3[2]);
+            style2 = window.getComputedStyle(two_h3[1]);
             wdt1 = style1.getPropertyValue('width');
             wdt2 = style2.getPropertyValue('width');
             

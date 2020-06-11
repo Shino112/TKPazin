@@ -58,8 +58,8 @@
             
               
             
-            for (var i = 0, len = one_h3.length; i < len; i++) {
-                for (var j = 0, len = two_h3.length; j < len; j++) {
+            for (var i = 0, len1 = one_h3.length; i < len1; i++) {
+                for (var j = 0, len2 = two_h3.length; j < len2; j++) {
                     if (one_h3[i] == two_h3[j]) {
                         style1 = window.getComputedStyle(two_h3[j]);
                         wdt1 = style1.getPropertyValue('width');

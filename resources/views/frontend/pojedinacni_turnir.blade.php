@@ -57,11 +57,11 @@
             var four_h3 = document.getElementsByClassName("four_h3");
             var five_h3 = document.getElementsByClassName("five_h3");
 
-            var one_bracket = document.getElementsByClassName("bracket bracket-1");
-            var two_bracket = document.getElementsByClassName("bracket bracket-1");
-            var three_bracket = document.getElementsByClassName("bracket bracket-2");
-            var four_bracket = document.getElementsByClassName("bracket bracket-3");
-            var five_bracket = document.getElementsByClassName("bracket bracket-2");
+            var one_bracket = document.getElementsByClassName("bracket-1");
+            var two_bracket = document.getElementsByClassName("bracket-1");
+            var three_bracket = document.getElementsByClassName("bracket-2");
+            var four_bracket = document.getElementsByClassName("bracket-3");
+            var five_bracket = document.getElementsByClassName("bracket-2");
 
             style1 = window.getComputedStyle(one_bracket);
             style2 = window.getComputedStyle(two_bracket);

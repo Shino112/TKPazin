@@ -52,16 +52,16 @@
     <script>
         function setWidth() {
               var one_h3 = document.getElementById("one_h3");
-              var two_h3 = document.getElementById("one_h3");
-              var three_h3 = document.getElementById("one_h3");
-              var four_h3 = document.getElementById("one_h3");
-              var five_h3 = document.getElementById("one_h3");
+              var two_h3 = document.getElementById("two_h3");
+              var three_h3 = document.getElementById("three_h3");
+              var four_h3 = document.getElementById("four_h3");
+              var five_h3 = document.getElementById("five_h3");
 
               var one_bracket = document.getElementById("one_bracket");
-              var two_bracket = document.getElementById("one_bracket");
-              var three_bracket = document.getElementById("one_bracket");
-              var four_bracket = document.getElementById("one_bracket");
-              var five_bracket = document.getElementById("one_bracket");
+              var two_bracket = document.getElementById("two_bracket");
+              var three_bracket = document.getElementById("three_bracket");
+              var four_bracket = document.getElementById("four_bracket");
+              var five_bracket = document.getElementById("five_bracket");
 
               style1 = window.getComputedStyle(one_bracket);
               style2 = window.getComputedStyle(two_bracket);

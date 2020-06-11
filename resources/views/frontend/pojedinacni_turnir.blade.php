@@ -58,7 +58,10 @@
               
             wdt1 = style1.getPropertyValue('width');
               
-            one_h3.style.width = wdt1;
+            
+            for (var i = 0, len = one_h3.length; i < len; i++) {
+                one_h3[i].style.width = wdt1;
+            }
         }, 100);
     </script>
 @endsection

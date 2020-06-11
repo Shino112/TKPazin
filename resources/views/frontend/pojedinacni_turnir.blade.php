@@ -75,11 +75,11 @@
               wdt4 = style4.getPropertyValue('width');
               wdt5 = style5.getPropertyValue('width');
               
-              one_h3.style.min-width = wdt1;
-              two_h3.style.min-width = wdt2;
-              three_h3.style.min-width = wdt3;
-              four_h3.style.min-width = wdt4;
-              five_h3.style.min-width = wdt5;
+              one_h3.style.minWidth = wdt1;
+              two_h3.style.minWidth = wdt2;
+              three_h3.style.minWidth = wdt3;
+              four_h3.style.minWidth = wdt4;
+              five_h3.style.minWidth = wdt5;
             }
 
         window.onload = setWidth;

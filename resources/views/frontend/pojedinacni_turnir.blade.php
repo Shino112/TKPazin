@@ -49,4 +49,11 @@
             $(this).addClass('active');
         });
     </script>
+    <script>
+        $(document).ready(function() {
+          $(".tournament-headers").css({
+            'width': ($(".tournament-brackets").width() + 'px')
+          });
+        });
+    </script>
 @endsection

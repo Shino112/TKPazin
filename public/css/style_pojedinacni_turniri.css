@@ -11,10 +11,7 @@ html {
 	display: flex;
 	flex-direction: row;
 }
- .tournament-headers ul {
-	display: flex;
-	flex-direction: row;
-}
+
  .tournament-headers h3 {
 	min-width: 20%;
     text-align:center;

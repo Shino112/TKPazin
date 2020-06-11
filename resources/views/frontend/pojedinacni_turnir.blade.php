@@ -65,8 +65,8 @@
               
             
             for (var i = 0, len1 = one_h3.length; i < len1; i++) {
-                    if (i == 0) {one_h3[i].style.width = wdt1;}
-                    if (i == 2) {one_h3[i].style.width = wdt2;}
+                    if (i % 2 == 0) {one_h3[i].style.width = wdt1;}
+                    else {one_h3[i].style.width = wdt2;}
                 }
         }, 100);
     </script>

@@ -54,18 +54,19 @@
             var one_h3 = document.getElementsByClassName("tournament-headers");
             var two_h3 = document.getElementsByClassName("tournament-brackets");
 
+                    
+            style1 = window.getComputedStyle(two_h3[0]);
+            style2 = window.getComputedStyle(two_h3[2]);
+            wdt1 = style1.getPropertyValue('width');
+            wdt2 = style2.getPropertyValue('width');
             
+                
             
               
             
             for (var i = 0, len1 = one_h3.length; i < len1; i++) {
-                for (var j = 0, len2 = two_h3.length; j < len2; j++) {
-                    if (one_h3[i] == two_h3[j]) {
-                        style1 = window.getComputedStyle(two_h3[j]);
-                        wdt1 = style1.getPropertyValue('width');
-                        one_h3[i].style.width = wdt1;}
-                
-            }}
+                    one_h3[i].style.width = wdt1;
+                }
         }, 100);
     </script>
 @endsection

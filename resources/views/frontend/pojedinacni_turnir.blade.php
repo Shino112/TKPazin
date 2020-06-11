@@ -80,6 +80,31 @@
             three_h3.style.width = wdt3;
             four_h3.style.width = wdt4;
             five_h3.style.width = wdt5;
-        }, 5000);
+
+            var one_h4 = document.getElementById("one_h4");
+            var two_h4 = document.getElementById("two_h4");
+            var three_h4 = document.getElementById("three_h4");
+            var four_h4 = document.getElementById("four_h4");
+
+            var one_bracket2 = document.getElementById("one_bracket2");
+            var two_bracket2 = document.getElementById("two_bracket2");
+            var three_bracket2 = document.getElementById("three_bracket2");
+            var four_bracket2 = document.getElementById("four_bracket2");
+
+            style6 = window.getComputedStyle(one_bracket2);
+            style7 = window.getComputedStyle(two_bracket2);
+            style8 = window.getComputedStyle(three_bracket2);
+            style9 = window.getComputedStyle(four_bracket2);
+
+            wdt6 = style6.getPropertyValue('width');
+            wdt7 = style7.getPropertyValue('width');
+            wdt8 = style8.getPropertyValue('width');
+            wdt9 = style9.getPropertyValue('width');
+
+            one_h4.style.width = wdt6;
+            two_h4.style.width = wdt7;
+            three_h4.style.width = wdt8;
+            four_h4.style.width = wdt9;
+        }, 100);
     </script>
 @endsection

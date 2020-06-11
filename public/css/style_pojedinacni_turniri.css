@@ -49,6 +49,7 @@ html {
 	 list-style-type: none;
 	 background: #fdfdfd;
 	 margin-bottom: 50px;
+	 width: max-content;
 }
  .bracket {
 	 padding-left: 0;

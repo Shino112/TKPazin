@@ -34,6 +34,16 @@ html {
     padding:1rem;
     font-size: medium;
 }
+
+.tournament-headers h5 {
+	min-width: 100%;
+    text-align:center;
+    font-weight: 400;
+    margin: 0;
+    padding:1rem;
+    font-size: medium;
+}
+
  .tournament-brackets {
 	 display: flex;
 	 flex-direction: row;

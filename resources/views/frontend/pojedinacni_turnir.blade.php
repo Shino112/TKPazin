@@ -51,17 +51,17 @@
     </script>
     <script>
         window.setInterval(function(){
-            var one_h3 = document.getElementsByClassName("one_h3");
-            var two_h3 = document.getElementsByClassName("two_h3");
-            var three_h3 = document.getElementsByClassName("three_h3");
-            var four_h3 = document.getElementsByClassName("four_h3");
-            var five_h3 = document.getElementsByClassName("five_h3");
+            var one_h3 = document.querySelectorAll("#one_h3");
+            var two_h3 = document.querySelectorAll("#two_h3");
+            var three_h3 = document.querySelectorAll("#three_h3");
+            var four_h3 = document.querySelectorAll("#four_h3");
+            var five_h3 = document.querySelectorAll("#five_h3");
 
-            var one_bracket = document.getElementsByClassName("bracket-1");
-            var two_bracket = document.getElementsByClassName("bracket-1");
-            var three_bracket = document.getElementsByClassName("bracket-2");
-            var four_bracket = document.getElementsByClassName("bracket-3");
-            var five_bracket = document.getElementsByClassName("bracket-2");
+            var one_bracket = document.querySelectorAll("#one_bracket");
+            var two_bracket = document.querySelectorAll("#two_bracket");
+            var three_bracket = document.querySelectorAll("#three_bracket");
+            var four_bracket = document.querySelectorAll("#four_bracket");
+            var five_bracket = document.querySelectorAll("#five_bracket");
 
             style1 = window.getComputedStyle(one_bracket);
             style2 = window.getComputedStyle(two_bracket);
@@ -81,16 +81,25 @@
             four_h3.style.width = wdt4;
             five_h3.style.width = wdt5;
 
-            var one_h4 = document.getElementsByClassName("one_h4");
-            var two_h4 = document.getElementsByClassName("two_h4");
-            var three_h4 = document.getElementsByClassName("three_h4");
-            var four_h4 = document.getElementsByClassName("four_h4");
+            var one_h4 = document.querySelectorAll("#one_h4");
+            var two_h4 = document.querySelectorAll("#two_h4");
+            var three_h4 = document.querySelectorAll("#three_h4");
+            var four_h4 = document.querySelectorAll("#four_h4");
 
+            var one_bracket2 = document.querySelectorAll("#one_bracket2");
+            var two_bracket2 = document.querySelectorAll("#two_bracket2");
+            var three_bracket2 = document.querySelectorAll("#three_bracket2");
+            var four_bracket2 = document.querySelectorAll("#four_bracket2");
 
-            wdt6 = style2.getPropertyValue('width');
-            wdt7 = style3.getPropertyValue('width');
-            wdt8 = style4.getPropertyValue('width');
-            wdt9 = style5.getPropertyValue('width');
+            style6 = window.getComputedStyle(one_bracket2);
+            style7 = window.getComputedStyle(two_bracket2);
+            style8 = window.getComputedStyle(three_bracket2);
+            style9 = window.getComputedStyle(four_bracket2);
+
+            wdt6 = style6.getPropertyValue('width');
+            wdt7 = style7.getPropertyValue('width');
+            wdt8 = style8.getPropertyValue('width');
+            wdt9 = style9.getPropertyValue('width');
 
             one_h4.style.width = wdt6;
             two_h4.style.width = wdt7;

@@ -24,7 +24,7 @@ html {
     
 }
 .tournament-headers h4 {
-	min-width: 25%;
+	width: 25% !important;
 	flex-shrink: 0;
     text-align:center;
     font-weight: 400;

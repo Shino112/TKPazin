@@ -50,7 +50,11 @@
         });
     </script>
     <script>
-        function setWidth() {
+        
+
+        
+        $(function(){
+           function setWidth() {
               var one_h3 = document.getElementById("one_h3");
               var two_h3 = document.getElementById("two_h3");
               var three_h3 = document.getElementById("three_h3");
@@ -80,8 +84,7 @@
               three_h3.style.width = wdt3;
               four_h3.style.width = wdt4;
               five_h3.style.width = wdt5;
-            }
-
-        window.onload = setWidth;
+            };
+        });
     </script>
 @endsection

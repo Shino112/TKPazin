@@ -26,7 +26,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="https://openresa.com/reservation#date=0&group=0&page=0" target="_blank" class="btn btn-outline-danger mb-4">Poveznica na sustav za rezerviranje terena</a>
+                <a href="https://openresa.com/club/TKPazin" target="_blank" class="btn btn-outline-danger mb-4">Poveznica na sustav za rezerviranje terena</a>
             </div>
         </div>
     </div>

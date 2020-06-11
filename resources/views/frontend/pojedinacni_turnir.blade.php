@@ -54,7 +54,7 @@
             var one_h3 = document.getElementsByClassName("tournament-headers");
             var two_h3 = document.getElementsByClassName("tournament-brackets");
 
-            style1 = window.getComputedStyle(two_h3);
+            style1 = window.getComputedStyle(two_h3[0]);
               
             wdt1 = style1.getPropertyValue('width');
               

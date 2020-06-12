@@ -18,7 +18,7 @@
             </div>
             <div class="col-12 col-lg-4 text-center">
                 <div class="media m-4">
-                    <div class="mr-3"><a href="#" target="_blank"><i
+                    <div class="mr-3"><a href="https://drive.google.com/file/d/1wLvGvomksRBbDuL9xVS_r-xVVLRDE1Sq/view?usp=sharing" target="_blank"><i
                         class="far fa-file-pdf fa-3x" style="color: #dc3545"></i></a></div>
                     <div class="media-body mt-3">
                         <a href="https://drive.google.com/file/d/1wLvGvomksRBbDuL9xVS_r-xVVLRDE1Sq/view?usp=sharing" target="_blank">

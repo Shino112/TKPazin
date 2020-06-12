@@ -35,7 +35,7 @@
                     <a class="nav-link navigacija-link" href="/rezervacija-terena">Rezervacija terena</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navigacija-link" href="{{ route('pojedinacni.turnir', \App\Sezona::orderBy('godina', 'desc')->pluck('id')->first()) }}">Pojedinačni turniri</a>
+                    <a class="nav-link navigacija-link" href="{{ route('pojedinacni.turnir', [$id_sezone = \App\Sezona::orderBy('godina', 'desc')->pluck('id')->first(), $id_kola = \App\TurnirPojedinacni::where('sezona_id', $id_sezone)->orderBy('id', 'desc')->pluck('id')->first()]) }}">Pojedinačni turniri</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle navigacija-link" href="#" id="navbarDropdownMenuLink" role="button"

@@ -60,7 +60,7 @@ Route::get('/rang-liste/pojedinacni-turnir/{godina}', [
 ]);
 
 /* Pojedinacni turnir rute */
-Route::get('/pojedinacni-turnir/{id_sezona}', [
+Route::get('/pojedinacni-turnir/{id_sezona}/{id_kola}', [
     'uses' => 'Frontend\PojedinacniTurnirController@show',
     'as' => 'pojedinacni.turnir',
 ]);

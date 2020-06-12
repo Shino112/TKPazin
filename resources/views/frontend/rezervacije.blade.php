@@ -21,7 +21,7 @@
                     <div class="mr-3"><a href="#" target="_blank"><i
                         class="far fa-file-pdf fa-3x" style="color: #dc3545"></i></a></div>
                     <div class="media-body mt-3">
-                        <a href="#" target="_blank">
+                        <a href="https://drive.google.com/file/d/1wLvGvomksRBbDuL9xVS_r-xVVLRDE1Sq/view?usp=sharing" target="_blank">
                         <h5 class="mt-0">Upute za korištenje sustava za rezervaciju terena</h5>
                         </a>
                     </div>

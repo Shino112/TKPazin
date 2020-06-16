@@ -63,7 +63,7 @@ class PiramidaController extends BackendController
     {
         $piramida = TurnirPiramida::findOrFail($id);
 
-        $igraci_u_piramidi = NastupPiramida::where('turnir_piramida_id', $id)->get();
+        $igraci_u_piramidi = NastupPiramida::where('turnir_piramida_id', $id)->orderBy('bodovi', 'desc')->get();
 
         $igraci_u_piramidiCount = NastupPiramida::where('turnir_piramida_id', $id)->count();
 

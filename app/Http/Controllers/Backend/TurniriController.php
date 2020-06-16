@@ -63,7 +63,7 @@ class TurniriController extends BackendController
     {
         $turnir = TurnirPojedinacni::findOrFail($id);
 
-        $igraci_u_turniru = NastupTurnir::where('turnir_pojedinacni_id', $id)->get();
+        $igraci_u_turniru = NastupTurnir::where('turnir_pojedinacni_id', $id)->orderBy('bodovi', 'desc')->get();
 
         $igraci_u_turniruCount = NastupTurnir::where('turnir_pojedinacni_id', $id)->count();
 

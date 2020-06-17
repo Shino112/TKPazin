@@ -75,7 +75,7 @@ Route::resource('/backend/novosti', 'Backend\NovostiController');
 
 //rute za igrace u CMS-u
 Route::resource('/backend/igraci', 'Backend\IgraciController');
-Route::get('/search', 'Backend\IgraciController@search');
+Route::get('/search-igrac', 'Backend\IgraciController@search');
 
 //rute za sezonu u CMS-u
 Route::resource('/backend/sezone', 'Backend\SezoneController');
@@ -107,6 +107,7 @@ Route::post('/backend/piramida/{piramida}/bodovi', [
     'uses' => 'Backend\PiramidaController@bodovi_store',
     'as' => 'bodovi.piramida.store',
 ]);
+Route::get('/search-piramida', 'Backend\PiramidaController@search');
 
 //rute za turnire u CMS-u
 Route::resource('/backend/turniri', 'Backend\TurniriController');
@@ -118,3 +119,4 @@ Route::post('/backend/turniri/{turniri}/bodovi', [
     'uses' => 'Backend\TurniriController@bodovi_store',
     'as' => 'bodovi.turnir.store',
 ]);
+Route::get('/search-turnir', 'Backend\TurniriController@search');

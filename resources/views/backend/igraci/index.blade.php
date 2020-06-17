@@ -26,7 +26,7 @@
                 </div>
                 <div class="pull-right">
                   <p>Igrača se može tražiti po imenu <b>ILI</b> po prezimenu</p>
-                  <form class="form-inline md-form mr-auto mb-4" action="/search" method="get">
+                  <form class="form-inline md-form mr-auto mb-4" action="/search-igrac" method="get">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
                   </form>

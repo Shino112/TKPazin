@@ -23,6 +23,17 @@ class PiramidaController extends BackendController
         return view("backend.piramida.index", compact('piramide', 'piramideCount'));
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $piramide = TurnirPiramida::
+                    join('sezonas', 'turnir_piramidas.sezona_id', '=', 'sezonas.id')
+                    ->where('sezonas.godina', 'like', '%'.$search.'%')
+                    ->paginate(10);
+        $piramideCount = TurnirPiramida::count();
+        return view("backend.piramida.index", compact('piramide', 'piramideCount'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

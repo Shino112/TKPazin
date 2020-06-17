@@ -23,6 +23,17 @@ class TurniriController extends BackendController
         return view("backend.turniri.index", compact('turniri', 'turniriCount'));
     }
 
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $turniri = TurnirPojedinacni::
+                    join('sezonas', 'turnir_pojedinacnis.sezona_id', '=', 'sezonas.id')
+                    ->where('sezonas.godina', 'like', '%'.$search.'%')
+                    ->paginate(10);
+        $turniriCount = TurnirPojedinacni::count();
+        return view("backend.turniri.index", compact('turniri', 'turniriCount'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

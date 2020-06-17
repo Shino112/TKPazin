@@ -24,6 +24,13 @@
                 <div class="pull-left">
                   <a href="{{ route('turniri.create') }}" class="btn btn-success">Dodaj novi turnir</a>
                 </div>
+                <div class="pull-right">
+                  <p>Turnir se može tražiti po sezoni</p>
+                  <form class="form-inline md-form mr-auto mb-4" action="/search-turnir" method="get">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+                    <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+                  </form>
+                </div>
               </div>
               <!-- /.box-header -->
               <div class="box-body ">

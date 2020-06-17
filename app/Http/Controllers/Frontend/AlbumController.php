@@ -11,7 +11,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::orderBy('created_at', 'desc')->get();
+        $albums = Album::inRandomOrder()->get();
 
         return view("frontend.galerija", compact('albums'))->render();
     }
@@ -20,7 +20,7 @@ class AlbumController extends Controller
     {
         $album = Album::FindOrFail($id);
 
-        $slike = Slika::where('album_id', $id)->get();
+        $slike = Slika::where('album_id', $id)->inRandomOrder()->get();
 
         return view('frontend.album', compact('album', 'slike'))->render();
     }

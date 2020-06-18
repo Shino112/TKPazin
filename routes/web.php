@@ -107,6 +107,18 @@ Route::post('/backend/piramida/{piramida}/bodovi', [
     'uses' => 'Backend\PiramidaController@bodovi_store',
     'as' => 'bodovi.piramida.store',
 ]);
+Route::get('/backend/piramida/{piramida}/bodovi/{igrac}/edit', [
+    'uses' => 'Backend\PiramidaController@bodovi_edit',
+    'as' => 'bodovi_edit.piramida',
+]);
+Route::delete('/backend/piramida/{piramida}/bodovi/{igrac}', [
+    'uses' => 'Backend\PiramidaController@bodovi_delete',
+    'as' => 'bodovi_delete.piramida',
+]);
+Route::put('/backend/piramida/{piramida}/bodovi/{igrac}', [
+    'uses' => 'Backend\PiramidaController@bodovi_update',
+    'as' => 'bodovi_update.piramida',
+]);
 Route::get('/search-piramida', 'Backend\PiramidaController@search');
 
 //rute za turnire u CMS-u
@@ -118,5 +130,17 @@ Route::get('/backend/turniri/{turniri}/bodovi', [
 Route::post('/backend/turniri/{turniri}/bodovi', [
     'uses' => 'Backend\TurniriController@bodovi_store',
     'as' => 'bodovi.turnir.store',
+]);
+Route::get('/backend/turniri/{turniri}/bodovi/{igrac}/edit', [
+    'uses' => 'Backend\TurniriController@bodovi_edit',
+    'as' => 'bodovi_edit.turnir',
+]);
+Route::delete('/backend/turniri/{turniri}/bodovi/{igrac}', [
+    'uses' => 'Backend\TurniriController@bodovi_delete',
+    'as' => 'bodovi_delete.turnir',
+]);
+Route::put('/backend/turniri/{turniri}/bodovi/{igrac}', [
+    'uses' => 'Backend\TurniriController@bodovi_update',
+    'as' => 'bodovi_update.turnir',
 ]);
 Route::get('/search-turnir', 'Backend\TurniriController@search');

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\TurnirPojedinacni;
 use App\NastupTurnir;
 use App\Igrac;
+use App\Sezona;
+use Illuminate\Support\Facades\DB;
 
 class TurniriController extends BackendController
 {
@@ -26,11 +28,11 @@ class TurniriController extends BackendController
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $turniri = TurnirPojedinacni::
-                    join('sezonas', 'turnir_pojedinacnis.sezona_id', '=', 'sezonas.id')
-                    ->where('sezonas.godina', 'like', '%'.$search.'%')
-                    ->paginate(10);
+        $sezona = Sezona::where('godina', $search)->pluck('id')->first();
+        $turniri = TurnirPojedinacni::where('sezona_id', $sezona)->paginate(10);
         $turniriCount = TurnirPojedinacni::count();
+
+        //dd($sezona);
         return view("backend.turniri.index", compact('turniri', 'turniriCount'));
     }
 
@@ -127,6 +129,38 @@ class TurniriController extends BackendController
             $bodovi_na_turniru->save();
         }
         return redirect(route('turniri.show', $id))->with("message", "Bodovi su uspješno dodani!");
+    }
+
+    public function bodovi_edit($id_turnira, $id_igraca)
+    {
+        $nastup_turnir = NastupTurnir::where('turnir_pojedinacni_id', $id_turnira)->where('igrac_id', $id_igraca)->first();
+        
+        $id_turnira = $id_turnira;
+        $turnir = TurnirPojedinacni::findOrFail($id_turnira);
+
+        return view("backend.bodovi_turnir.edit", compact('nastup_turnir', 'id_turnira', 'turnir'));
+    }
+
+    public function bodovi_update(Request $request, $id_turnira, $id_igraca)
+    {
+        $this->validate($request, [
+            'bodovi' => 'required',
+        ]);
+
+        $nastup_turnir = NastupTurnir::where('turnir_pojedinacni_id', $id_turnira)->where('igrac_id', $id_igraca)->first();
+
+        //dd($request->bodovi);
+        //dd($nastup_turnir);
+        DB::table('nastup_turnirs')->where('turnir_pojedinacni_id', $nastup_turnir->turnir_pojedinacni_id)->where('igrac_id', $nastup_turnir->igrac_id)->update(['bodovi' => $request->bodovi]);
+
+        return redirect(route('turniri.show', $id_turnira))->with("message", "Bodovi igrača na turniru su uspješno izmjenjeni!");
+    }
+
+    public function bodovi_delete($id_turnira, $id_igraca)
+    {
+        DB::table('nastup_turnirs')->where('turnir_pojedinacni_id', $id_turnira)->where('igrac_id', $id_igraca)->delete();
+        
+        return redirect(route('turniri.show', $id_turnira))->with("message", "Bodovi igrača na turniru su uspješno izbrisani!");
     }
 
     /**

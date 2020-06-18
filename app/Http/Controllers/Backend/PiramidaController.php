@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\TurnirPiramida;
 use App\NastupPiramida;
 use App\Igrac;
+use App\Sezona;
+use Illuminate\Support\Facades\DB;
 
 class PiramidaController extends BackendController
 {
@@ -26,10 +28,8 @@ class PiramidaController extends BackendController
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $piramide = TurnirPiramida::
-                    join('sezonas', 'turnir_piramidas.sezona_id', '=', 'sezonas.id')
-                    ->where('sezonas.godina', 'like', '%'.$search.'%')
-                    ->paginate(10);
+        $sezona = Sezona::where('godina', $search)->pluck('id')->first();
+        $piramide = TurnirPiramida::where('sezona_id', $sezona)->paginate(10);
         $piramideCount = TurnirPiramida::count();
         return view("backend.piramida.index", compact('piramide', 'piramideCount'));
     }
@@ -127,6 +127,38 @@ class PiramidaController extends BackendController
             $bodovi_na_piramidi->save();
         }
         return redirect(route('piramida.show', $id))->with("message", "Bodovi su uspješno dodani!");
+    }
+
+    public function bodovi_edit($id_piramida, $id_igraca)
+    {
+        $nastup_piramida = NastupPiramida::where('turnir_piramida_id', $id_piramida)->where('igrac_id', $id_igraca)->first();
+        
+        $id_turnira = $id_piramida;
+        $piramida = TurnirPiramida::findOrFail($id_piramida);
+
+        return view("backend.bodovi_piramida.edit", compact('nastup_piramida', 'id_turnira', 'piramida'));
+    }
+
+    public function bodovi_update(Request $request, $id_piramida, $id_igraca)
+    {
+        $this->validate($request, [
+            'bodovi' => 'required',
+        ]);
+
+        $nastup_piramida = NastupPiramida::where('turnir_piramida_id', $id_piramida)->where('igrac_id', $id_igraca)->first();
+
+        //dd($request->bodovi);
+        //dd($nastup_turnir);
+        DB::table('nastup_piramidas')->where('turnir_piramida_id', $nastup_piramida->turnir_piramida_id)->where('igrac_id', $nastup_piramida->igrac_id)->update(['bodovi' => $request->bodovi]);
+
+        return redirect(route('piramida.show', $id_piramida))->with("message", "Bodovi igrača na piramidi su uspješno izmjenjeni!");
+    }
+
+    public function bodovi_delete($id_piramida, $id_igraca)
+    {
+        DB::table('nastup_piramidas')->where('turnir_piramida_id', $id_piramida)->where('igrac_id', $id_igraca)->delete();
+        
+        return redirect(route('piramida.show', $id_piramida))->with("message", "Bodovi igrača na piramidi su uspješno izbrisani!");
     }
 
     /**

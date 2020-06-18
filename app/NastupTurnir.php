@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class NastupTurnir extends Model
 {
+    protected $fillable = ['bodovi'];
+
     public function bodovi_pojedinacni_turnir_turnir()
     {
         return $this->belongsTo(TurnirPojedinacni::class, 'turnir_pojedinacni_id');

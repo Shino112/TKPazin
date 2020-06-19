@@ -32,16 +32,16 @@
     <p style="color: white;">U tražilicu možete unijeti ime ili prezime igrača radi lakšeg pronalaženja.</p>
     <input class="form-control" id="myInput" type="text" placeholder="Unesite ime ili prezime...">
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow-y: auto; height: 500px; margin-bottom: 50px;">
         <table class="table table-hover">
             <thead class="thead-dark">
                 <tr>
-                <th scope="col">#</th>
-                <th scope="col">Ime i prezime</th>
+                <th class="sticky-top" scope="col">#</th>
+                <th class="sticky-top" scope="col">Ime i prezime</th>
                 @foreach($kola as $kolo)
-                    <th scope="col">{{ $kolo->naziv }}</th>
+                    <th class="sticky-top" scope="col">{{ $kolo->naziv }}</th>
                 @endforeach
-                <th scope="col">Ukupno</th>
+                <th class="sticky-top" scope="col">Ukupno</th>
                 </tr>
             </thead>
             <tbody id="myTable">

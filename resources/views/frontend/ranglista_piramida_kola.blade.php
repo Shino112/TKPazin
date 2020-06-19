@@ -50,35 +50,34 @@
                 <tr>
                     <td scope="row" class="sno">&nbsp;</td>
                     <td>
-                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="view_{{ $igrac->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel" style="color: #000000;">Natjecatelj: {{ $igrac->ime . " " . $igrac->prezime }}</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
+                        
+                        <a class="btn btn-outline-danger" href="#open-modal_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</a>
+                        <div id="open-modal_{{ $igrac->id }}" class="modal-window">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel" style="color: #000000;">Natjecatelj: {{ $igrac->ime . " " . $igrac->prezime }}</h5>
+                                <a href="#" title="Close" class="close"></a>
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="{{ $igrac->slika }}" alt="..." class="img-thumbnail">
                                     </div>
-                                    <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <img src="{{ $igrac->slika }}" alt="..." class="img-thumbnail">
-                                        </div>
-                                        <div class="col-6" style="color: #000000;">
-                                            <b>Prebivalište: </b>
-                                            <p> {{ $igrac->prebivaliste }}</p>
-                                            <b>Igra: </b>
-                                            <p> {{ $igrac->igra }}</p>
-                                            <b>Član kluba od:</b>
-                                            <p> {{ $igrac->clanstvo }}. godine</p>
-                                        </div>
+                                    <div class="col-6" style="color: #000000;">
+                                        <b>Prebivalište: </b>
+                                        <p> {{ $igrac->prebivaliste }}</p>
+                                        <b>Igra: </b>
+                                        <p> {{ $igrac->igra }}</p>
+                                        <b>Član kluba od:</b>
+                                        <p> {{ $igrac->clanstvo }}. godine</p>
                                     </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
-                                    </div>
+                                </div>
+                                </div>
+                                <div class="modal-footer">
+                                
+                                <a href="#" title="Close" class="btn btn-secondary">Close</a>
                                 </div>
                             </div>
                         </div>

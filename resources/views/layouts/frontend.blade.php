@@ -25,7 +25,29 @@
 
       gtag('config', 'UA-169615847-1');
     </script>
-
+    <!-- Repixel Code -->
+    <script>
+      (function(w, d, s, id, src){
+      w.Repixel = r = {
+        init: function(id) {
+          w.repixelId = id;
+        }
+      };
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)){ return; }
+      js = d.createElement(s); 
+      js.id = id;
+      js.async = true;
+      js.onload = function(){
+          Repixel.init(w.repixelId);
+      };
+      js.src = src;
+      fjs.parentNode.insertBefore(js, fjs);
+      }(window, document, 'script', 'repixel', 
+      'https://sdk.repixel.co/r.js'));
+      Repixel.init('5eec827cad25e6000842ffa3');
+    </script>
+    <!-- Repixel Code -->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #000000;">

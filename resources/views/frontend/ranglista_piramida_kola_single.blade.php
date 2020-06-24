@@ -49,7 +49,7 @@
                 @if($igrac->igrac_piramida()->whereIn('turnir_piramida_id', $kola_id)->sum('bodovi') != 0)
                 <tr>
                     <td scope="row" class="sno">&nbsp;</td>
-                    <td>
+                    <td style="min-width: 200px;">
                         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
                         <!-- Modal -->
                         <div class="modal fade" id="view_{{ $igrac->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -142,3 +142,7 @@ td {
         display: none;
     }
   }
+
+  .table td, .table th{
+      text-align: center;
+  }

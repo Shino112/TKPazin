@@ -37,7 +37,6 @@
             <thead class="thead-dark">
                 <tr>
                 <th class="sticky-top" scope="col">#</th>
-                <th class="sticky-top" scope="col"></th>
                 <th class="sticky-top" scope="col">Ime i prezime</th>
                 @foreach($kola as $kolo)
                     <th class="sticky-top" scope="col">{{ $kolo->naziv }}</th>
@@ -49,18 +48,7 @@
                 @foreach($igraci as $igrac)
                 @if($igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') != 0)
                 <tr>
-                    <td scope="row" class="sno" style="font-weight: 500;">&nbsp;</td>
-                    @foreach($igraci2 as $igrac2)
-                        @if($igrac->id == $igrac2->id)
-                            @if($loop->parent->index == $loop->index)
-                                <td><font color="black" size="5px"><b>=</b></font></td> 
-                            @elseif ($loop->parent->index > $loop->index)
-                                <td><font color="red" size="5px"><b>&#8659;</b></font></td>
-                            @elseif ($loop->parent->index < $loop->index)
-                                <td><font color="#45DC13" size="5px"><b>&#8657;</b></font></td>
-                            @endif
-                        @endif
-                    @endforeach        
+                    <td scope="row" class="sno" style="font-weight: 500;">&nbsp;</td>       
                     <td>
                         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
                         <!-- Modal -->

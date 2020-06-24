@@ -1,17 +1,17 @@
 @extends('layouts.frontend')
-@section('title', 'TK Pazin | Rang-liste Pojedinačni turnir')
+@section('title', 'TK Pazin | Rang-liste Piramida')
 @section('content')
     <!-- Page Content -->
     <div class="container">
     <!-- Page Heading -->
-    <h1 class="my-4">Rang-lista | Pojedinačni turnir {{ $sezona->godina }}</h1>
+    <h1 class="my-4">Rang-lista | Piramida {{ $sezona->godina }}</h1>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
         @foreach($sezone as $sezona)
             @if($sezona->id == session('odabrana_godina'))
                 <li class="breadcrumb-item active" aria-current="page">{{ $sezona->godina }}</li>
             @else
-                <li class="breadcrumb-item"><a href="{{ route('ranglista.turnir.kola', $sezona->id) }}">{{ $sezona->godina }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('ranglista.piramida.kola', $sezona->id) }}">{{ $sezona->godina }}</a></li>
             @endif
         @endforeach
         </ol>
@@ -23,7 +23,7 @@
             <div class="media-body mt-3">
                 <a href="/datoteke/Pravila-Piramida.pdf" target="_blank">
                 <h5 class="mt-0">Pravila
-                    natjecanja u pojedinačnom turniru
+                    natjecanja u piramidi
                 </h5>
                 </a>
             </div>
@@ -37,7 +37,6 @@
             <thead class="thead-dark">
                 <tr>
                 <th class="sticky-top" scope="col">#</th>
-                <th class="sticky-top" scope="col"></th>
                 <th class="sticky-top" scope="col">Ime i prezime</th>
                 @foreach($kola as $kolo)
                     <th class="sticky-top" scope="col">{{ $kolo->naziv }}</th>
@@ -47,20 +46,9 @@
             </thead>
             <tbody id="myTable">
                 @foreach($igraci as $igrac)
-                @if($igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') != 0)
+                @if($igrac->igrac_piramida()->whereIn('turnir_piramida_id', $kola_id)->sum('bodovi') != 0)
                 <tr>
-                    <td scope="row" class="sno" style="font-weight: 500;">&nbsp;</td>
-                    @foreach($igraci2 as $igrac2)
-                        @if($igrac->id == $igrac2->id)
-                            @if($loop->parent->index == $loop->index)
-                                <td><font color="black" size="5px"><b>=</b></font></td> 
-                            @elseif ($loop->parent->index > $loop->index)
-                                <td><font color="red" size="5px"><b>&#8659;</b></font></td>
-                            @elseif ($loop->parent->index < $loop->index)
-                                <td><font color="#45DC13" size="5px"><b>&#8657;</b></font></td>
-                            @endif
-                        @endif
-                    @endforeach        
+                    <td scope="row" class="sno">&nbsp;</td>
                     <td>
                         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
                         <!-- Modal -->
@@ -96,15 +84,16 @@
                         </div>
                     </td>
                         @foreach($kola as $kolo)
-                            @foreach($igrac->igrac_turnir as $ip)
-                                @if($ip->pivot->turnir_pojedinacni_id == $kolo->id)
+                            @foreach($igrac->igrac_piramida as $ip)
+                                @if($ip->pivot->turnir_piramida_id == $kolo->id)
                                     <td>{{ $ip->pivot->bodovi }}</td>
+                                    
                                 @endif
                                     
                             @endforeach
                                 
                         @endforeach
-                        <td>{{ $igrac->igrac_turnir()->whereIn('turnir_pojedinacni_id', $kola_id)->sum('bodovi') }}</td>
+                        <td>{{ $igrac->igrac_piramida()->whereIn('turnir_piramida_id', $kola_id)->sum('bodovi') }}</td>
                 </tr>
                 @endif
                 @endforeach

@@ -16,7 +16,7 @@
                         <a href="{{ route('prikaz.novosti', $post->id) }}">{{ $post->naslov }}</a>
                     </h4>
                     @if (strlen($post->tekst) >= 200)
-                        {!! substr(Markdown::convertToHtml($post->tekst), 0, 200) !!}
+                        {!! substr(Markdown::convertToHtml($post->tekst), 0, 200) !!}...
                         <br>
                         <a href="{{ route('prikaz.novosti', $post->id) }}" class="btn btn-light m-2 float-right">Pročitaj više</a>
                     @else

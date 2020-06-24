@@ -15,7 +15,13 @@
                     <h4 class="card-title">
                         <a href="{{ route('prikaz.novosti', $post->id) }}">{{ $post->naslov }}</a>
                     </h4>
-                    {!! Markdown::convertToHtml($post->tekst) !!}
+                    @if (strlen($post->tekst) >= 200)
+                        {!! substr(Markdown::convertToHtml($post->tekst), 0, 200) !!}
+                        <br>
+                        <a href="{{ route('prikaz.novosti', $post->id) }}" class="btn btn-light m-2 float-right">Pročitaj više</a>
+                    @else
+                        {!! Markdown::convertToHtml($post->tekst) !!}
+                    @endif
                 </div>
                 <div class="card-footer bg-transparent border-info"><h6>Objavljeno: {{ $post->created_at->diffForHumans() }}</h6></div>
             </div>

@@ -61,7 +61,7 @@
                             @endif
                         @endif
                     @endforeach        
-                    <td>
+                    <td style="min-width: 200px;">
                         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#view_{{ $igrac->id }}">{{ $igrac->ime . " " . $igrac->prezime }}</button>
                         <!-- Modal -->
                         <div class="modal fade" id="view_{{ $igrac->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -183,7 +183,7 @@
         <br>
         <small>Copyright &copy; 2020 Tenis klub Pazin - Sva prava pridržana</small>
         <br>
-        <small>Izradili: <a href="https://www.linkedin.com/in/luka-oto%C4%8Dan-643a301a4/" target="_blank">Luka Otočan</a> i <a href="https://www.facebook.com/filip.basa" target="_blank">Filip Baša</a></small>
+        <small>Izradili: <a href="https://www.linkedin.com/in/luka-oto%C4%8Dan-643a301a4/" target="_blank">Luka Otočan</a> i <a href="https://www.linkedin.com/in/filip-ba%C5%A1a-6982601bb/" target="_blank">Filip Baša</a></small>
     </div>
 </footer>
 

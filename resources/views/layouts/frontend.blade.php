@@ -15,39 +15,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     @yield('css')
-    <script data-ad-client="ca-pub-7404475039697434" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169615847-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-169615847-1');
-    </script>
-    <!-- Repixel Code -->
-    <script>
-      (function(w, d, s, id, src){
-      w.Repixel = r = {
-        init: function(id) {
-          w.repixelId = id;
-        }
-      };
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)){ return; }
-      js = d.createElement(s); 
-      js.id = id;
-      js.async = true;
-      js.onload = function(){
-          Repixel.init(w.repixelId);
-      };
-      js.src = src;
-      fjs.parentNode.insertBefore(js, fjs);
-      }(window, document, 'script', 'repixel', 
-      'https://sdk.repixel.co/r.js'));
-      Repixel.init('5eec827cad25e6000842ffa3');
-    </script>
-    <!-- Repixel Code -->
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #000000;">

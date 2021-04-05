@@ -146,8 +146,6 @@
 
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-        <small>Rezervacija terena: <a href="tel:098-873-254" style="color:#FF9F33; font-weight: 700; font-size:medium;">098 873 254</a></small>
-        <br>
         <small>Copyright &copy; 2020 Tenis klub Pazin - Sva prava pridržana</small>
         <br>
         <small>Izradili: <a href="https://www.linkedin.com/in/luka-oto%C4%8Dan-643a301a4/" target="_blank">Luka Otočan</a> i <a href="https://www.linkedin.com/in/filip-ba%C5%A1a-6982601bb/" target="_blank">Filip Baša</a></small>

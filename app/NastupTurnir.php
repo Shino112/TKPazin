@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NastupTurnir extends Model
 {
-    protected $fillable = ['bodovi'];
+    protected $fillable = ['bodovi', 'turnir_pojedinacni_id', 'igrac_id'];
 
     public function bodovi_pojedinacni_turnir_turnir()
     {

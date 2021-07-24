@@ -4,7 +4,12 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\NastupTurnir;
+use App\NastupPiramida;
 use App\Igrac;
+use App\Sezona;
+use App\TurnirPojedinacni;
+use App\TurnirPiramida;
 use Illuminate\Support\Facades\DB;
 
 class IgraciController extends BackendController
@@ -16,7 +21,7 @@ class IgraciController extends BackendController
         parent::__construct();
         $this->uploadPath = public_path('img/igraci');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -74,7 +79,7 @@ class IgraciController extends BackendController
             $destination = $this->uploadPath;
             $image->move($destination, $fileName);
 
-            Igrac::create([
+            $igrac = Igrac::create([
                 'ime' => $request->ime,
                 'prezime' => $request->prezime,
                 'prebivaliste' => $request->prebivaliste,
@@ -86,7 +91,7 @@ class IgraciController extends BackendController
         }
         else
         {
-            Igrac::create([
+            $igrac = Igrac::create([
                 'ime' => $request->ime,
                 'prezime' => $request->prezime,
                 'prebivaliste' => $request->prebivaliste,
@@ -94,6 +99,32 @@ class IgraciController extends BackendController
                 'clanstvo' => $request->clanstvo,
             ]);
         }
+
+        $zadnja_sezona = Sezona::latest()->first();
+
+        $turniri_u_zadnjoj_sezoni = TurnirPojedinacni::where('sezona_id',$zadnja_sezona->id)->get();
+
+        $piramide_u_zadnjoj_sezoni = TurnirPiramida::where('sezona_id', $zadnja_sezona->id)->get();
+
+        foreach ($turniri_u_zadnjoj_sezoni as $turnir_u_zadnjoj_sezoni)
+        {
+            NastupTurnir::create([
+                'turnir_pojedinacni_id' => $turnir_u_zadnjoj_sezoni->id,
+                'igrac_id' => $igrac->id,
+                'bodovi' => 0
+            ]);
+        }
+
+        foreach ($piramide_u_zadnjoj_sezoni as $piramida_u_zadnjoj_sezoni )
+        {
+            NastupPiramida::create([
+                'turnir_piramida_id' => $piramida_u_zadnjoj_sezoni ->id,
+                'igrac_id' => $igrac->id,
+                'bodovi' => 0
+            ]);
+        }
+
+        //dd($turniri_u_zadnjoj_sezoni, $piramide_u_zadnjoj_sezoni, $igrac);
 
         return redirect(route('igraci.index'))->with('message', 'Igrač je uspješno izrađen!');
     }
@@ -118,7 +149,7 @@ class IgraciController extends BackendController
     public function edit($id)
     {
         $igrac = Igrac::findOrFail($id);
-        
+
         return view("backend.igraci.edit", compact('igrac'));
     }
 
@@ -143,7 +174,7 @@ class IgraciController extends BackendController
         $igrac = Igrac::findOrFail($id);
 
         $oldImage = $igrac->slika;
-        
+
         if($request->hasFile('slika'))
         {
             $image = $request->file('slika');
@@ -159,7 +190,7 @@ class IgraciController extends BackendController
                 'clanstvo' => $request->clanstvo,
                 'slika' => '/img/igraci/' . $fileName
             ]);
-            
+
 
         }
         else

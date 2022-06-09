@@ -50,7 +50,7 @@
             <div class="col-12 col-md-4">
                 <div class="card text-black mb-3 mx-auto" style="max-width: 18rem; background-color: #FF9F33;">
                 <div class="card-body">
-                    <h5 class="card-title text-center" style="color:#000000">Alen Bakša</h5>
+                    <h5 class="card-title text-center" style="color:#000000"></h5>
                     <p class="card-text text-center">Potpredsjednik kluba</p>
                 </div>
                 </div>

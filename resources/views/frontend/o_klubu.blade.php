@@ -22,9 +22,9 @@
                 <div class="align-center">
                 <i class="far fa-money-bill-alt fa-5x mar-bot20"></i>
                 <h4 class="text-bold" style="color:#000000">Članarina:</h4>
-                <p>Godišnja članarina iznosi <strong>200 kn</strong>, a učlaniti se mogu svi građani RH. Za
+                <p>Godišnja članarina iznosi <strong>40 €</strong>, a učlaniti se mogu svi građani RH. Za
                     uplatnicu nazvati <a href="tel:+385 98 8732 54" style="color:#3867d6; font-weight:bold;">+385 98
-                    8732 54</a>. Za članove učenike i studente godišnja članarina iznosi <strong>50 kn</strong>.
+                    8732 54</a>. Za članove učenike i studente godišnja članarina iznosi <strong>10 €</strong>.
                 </p>
                 </div>
             </div>
@@ -32,10 +32,9 @@
                 <div class="align-center">
                 <i class="fas fa-calendar-alt fa-5x mar-bot20"></i>
                 <h4 class="text-bold" style="color:#000000">Rezervacija terena:</h4>
-                <p>Rezervacija terena se vrši iskljućivo putem online sustava za rezerviranje terena. Sustavu se pristupa putem sljedećeg linka: <a href="https://openresa.com/club/TKPazin">https://openresa.com/club/TKPazin</a>. Sat igranja za članove iznosi <strong>10 kn</strong> po satu. Igranja za
+                <p>Rezervacija terena se vrši iskljućivo putem online sustava za rezerviranje terena. Sustavu se pristupa putem sljedećeg linka: <a href="https://openresa.com/club/TKPazin">https://openresa.com/club/TKPazin</a>. Sat igranja za članove iznosi <strong>2 €</strong> po satu. Igranja za
                     članove učenike radnim danom do 15 sati je <strong>besplatno</strong> a u ostalim terminima
-                    iznosi isto kao i za ostale članove. Za ostale koji nisu članovi kluba naplaćuje se po <strong>50
-                    kn</strong> sat a minimalno se može rezervirati 2 sata.
+                    iznosi isto kao i za ostale članove. Ako termini prisustvuju član i ne član tada cijena termina po satu iznosi <strong>3 €</strong>. Za ostale koji nisu članovi kluba naplaćuje se po <strong>10 €</strong> sat a minimalno se može rezervirati 2 sata.
                 </p>
                 </div>
             </div>

@@ -34,7 +34,7 @@
                 <h4 class="text-bold" style="color:#000000">Rezervacija terena:</h4>
                 <p>Rezervacija terena se vrši iskljućivo putem online sustava za rezerviranje terena. Sustavu se pristupa putem sljedećeg linka: <a href="https://openresa.com/club/TKPazin">https://openresa.com/club/TKPazin</a>. Sat igranja za članove iznosi <strong>3 €</strong> po satu. Igranja za
                     članove učenike radnim danom do 15 sati je <strong>besplatno</strong> a u ostalim terminima
-                    iznosi isto kao i za ostale članove. Ako termini prisustvuju član i ne član tada cijena termina po satu iznosi <strong>6 €</strong>. Za ostale koji nisu članovi kluba naplaćuje se po <strong>10 €</strong> sat a minimalno se može rezervirati 2 sata.
+                    iznosi isto kao i za ostale članove. Ako termini prisustvuju član i ne član tada cijena termina po satu iznosi <strong>6 €</strong>. Za ostale koji nisu članovi kluba naplaćuje se po <strong>10 €</strong> sat a minimalno se može rezervirati 2 sata
                 </p>
                 </div>
             </div>
